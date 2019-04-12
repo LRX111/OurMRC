@@ -18,8 +18,10 @@
 This module prepares and runs the whole system.
 """
 import sys
+import importlib
 if sys.version[0] == '2':
-    reload(sys)
+    # reload(sys)
+    importlib.reload(sys)
     sys.setdefaultencoding("utf-8")
 sys.path.append('..')
 import os
